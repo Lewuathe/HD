@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+			function post() {
+				var url = document.getElementById("url").value;
+				document.getElementById("form").action = url;
+				console.log(document.getElementById("form").action);
+				document.getElementById("form").submit();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" value="http://localhost/search.php" size="100" id="url"/>
+		<form id="form" action="" method="post" enctype="multipart/form-data">
+			<input type="file" name="upload-file" />
+			<input value="送信" type="button" onclick="post();" />
+		</form>
+	</body>
+</html>

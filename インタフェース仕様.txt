@@ -1,0 +1,28 @@
+【HTTPリクエスト】
+URL：http://HOSTNAME/search.php
+POSTメソッド
+ヘッダーenctypeに値としてmultipart/form-dataを指定し、encodeした画象を送信する。
+アップロードするファイルには"upload-file"という名前付けをする。
+
+
+【HTTPレスポンス】
+XMLで返却。
+ヘッダContent-Typeを"application/xml; charset=UTF-8"とする。
+<pictures>
+    <picture uri="http://~~" />
+    <picture uri="http://~~" />
+    <picture uri="http://~~" />
+    <picture uri="http://~~" />
+</pictures>
+
+
+【類似画像検索ライブラリ】
+実行ファイル：search.exe
+パラメータ：１つ→入力とする画象のファイルパス(ローカルファイル)
+返却値：類似画象のパス一覧をXMLにして返却
+<pictures>
+    <picture uri="/path/to/file" />
+    <picture uri="/path/to/file" />
+    <picture uri="/path/to/file" />
+    <picture uri="/path/to/file" />
+</pictures>
